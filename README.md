@@ -784,10 +784,10 @@ async1()
 
 >## Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 
-### [Serial & Parallel Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/parSer.js)
+- #### [Serial & Parallel Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/parSer.js)
 
 
-### [Serial Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
+#### [Serial Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
 
 ### [Serial Example 2 - SWAPI](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
 >## Example(s) that demonstrate how to implement our own promise-solutions.
