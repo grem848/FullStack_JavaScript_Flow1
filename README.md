@@ -773,14 +773,14 @@ async1(function(){
 
 ## Example of how to fix/prevent the callback hell/pyramid of hell
 ```
-async1
-  then(async2).
-  then(async3).
-  then(async4).
-  then(async5).
-  catch(errorHandlingForAll);
-});
+async1()
+  .then(async2).
+  .then(async3).
+  .then(async4).
+  .then(async5).
+  .catch(errorHandlingForAll);
 ```
+
 
 >## Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 
@@ -789,7 +789,7 @@ async1
 
 ## [Serial Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
 
-
+## [Serial Example 2 - SWAPI](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
 >## Example(s) that demonstrate how to implement our own promise-solutions.
 
 ## [Custom promise Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/myPromise.js)
