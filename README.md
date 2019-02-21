@@ -759,7 +759,19 @@ https://www.youtube.com/watch?v=PoRJizFvM7s
 
 >## Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 
+Serial & Parallel: 
+https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/parSer.js
+
+Serial:    
+https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js
+
 >## Example(s) that demonstrate how to implement our own promise-solutions.
+
+Custom promise:
+https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/myPromise.js
+
+Other examples of own promises:
+https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoyoutube/promises.js
 
 >## Example(s) that demonstrate error handling with promises
 
