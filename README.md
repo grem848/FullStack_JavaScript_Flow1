@@ -775,6 +775,8 @@ https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises
 
 >## Example(s) that demonstrate error handling with promises
 
+Shows the use of catch:
+https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/promisePar.js
 
 ### Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
 
