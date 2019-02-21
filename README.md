@@ -139,7 +139,7 @@ NPM is a package manager for Node.js with hundreds of thousands of packages, whi
 ### Call Stack:
 Runs first, these are the executed calls from javascript.
  
-### Webapis:
+### WebApi's:
 These run and are send away to the browser and to different threads, they complete separately and then when they are finished the go to the task queue.
  
 ### Task Queue:
@@ -504,7 +504,7 @@ Here you use the reusable module in main.js
     console.log(person1.getInfo);
 ```
 
-# es2005 -->
+
 
 # ES6,7,8... and TypeScript
 
@@ -754,8 +754,33 @@ https://www.youtube.com/watch?v=PoRJizFvM7s
 
 >## Example(s) that demonstrate how to avoid the callback hell  (“Pyramid of Doom")
 
+## Examples of the Pyramid of Doom
+Avoiding the callback hell/pyramid of doom, is by using Promises or async await.
+```
+async1(function(){
+    async2(function(){
+        async3(function(){
+            async4(function(){
+                async5(function(){
+                ....
+            });
+        });
+    });
+});
+```
+
 <img src="https://cdn-images-1.medium.com/max/1600/1*mL04Mh-tDosU6_OlqexwyQ.jpeg" width="500">
 
+## Example of how to fix/prevent the callback hell/pyramid of hell
+```
+async1
+  then(async2).
+  then(async3).
+  then(async4).
+  then(async5).
+  catch(errorHandlingForAll);
+});
+```
 
 >## Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 
@@ -774,7 +799,7 @@ https://www.youtube.com/watch?v=PoRJizFvM7s
 
 >## Example(s) that demonstrate error handling with promises
 
-## [Shows the use of catch:](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/promisePar.js)
+## [Shows the use of catch](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/promisePar.js)
 
 ### Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
 
