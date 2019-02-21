@@ -784,22 +784,22 @@ async1()
 
 >## Example(s) that demonstrate how to execute asynchronous (promise-based) code in serial or parallel
 
-## [Serial & Parallel Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/parSer.js)
+### [Serial & Parallel Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/parSer.js)
 
 
-## [Serial Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
+### [Serial Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
 
-## [Serial Example 2 - SWAPI](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
+### [Serial Example 2 - SWAPI](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promiseexercise/exercise2.js)
 >## Example(s) that demonstrate how to implement our own promise-solutions.
 
-## [Custom promise Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/myPromise.js)
+### [Custom promise Example](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/myPromise.js)
 
 
-## [Other examples of own promises](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoyoutube/promises.js)
+### [Other examples of own promises](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoyoutube/promises.js)
 
 >## Example(s) that demonstrate error handling with promises
 
-## [Shows the use of catch](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/promisePar.js)
+### [Shows the use of catch](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/promisePar.js)
 
 ### Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
 
