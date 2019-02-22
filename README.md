@@ -84,11 +84,22 @@ Java follows class based inheritance—a top down, hierarchical, class-based rel
 
 >## Explain the two strategies for improving JavaScript: ES6 (es2015) + ES7, versus Typescript. What does it require to use these technologies: In our backend with Node and in (many different) Browsers
 
+Link to week about this subject: 
+- https://fullstackjs.netlify.com/period1/day4/
+
 ### JavaScript: ES6(es2015) + ES7:
 - The natural evolution of JavaScript, bringing features like arrow functions, Classes and Inheritance, promises, Generators and much more.
 - Can be used in "all" browsers using a polyfil or a transpiler
 
 - Can be used with NodeJS (almost) out of the box with LTS v6.x(Long Term Support stream), otherwise via a transpiler (Babel)
+
+### Babel (JavaScript Compiler):
+
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Here are the main things Babel can do for you:
+
+- Transform syntax
+- Polyfill features that are missing in your target environment (through @babel/polyfill)
+- Source code transformations (codemods)
 
 Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
 
@@ -105,7 +116,12 @@ Babel is a essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you t
 
 >## Explain generally about node.js, when it “makes sense” and npm, and how it “fits” into the node echo system.
 
-Node.js is an event based, asynchronous I/O server side platform that runs on Google's V8 JavaScript Engine for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+Link to week about subject:
+- https://fullstackjs.netlify.com/period1/day1/
+- https://fullstackjs.netlify.com/period1/day2/
+
+
+Node.js is an event based, asynchronous I/O server side platform that runs on Google's V8 JavaScript Engine designed to build scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
 #### What it's NOT
 - Node.js is not a JavaScript framework.
 - Node.js' V8 wrappers are not made in JavaScript but C.
@@ -140,10 +156,13 @@ NPM is a package manager for Node.js with hundreds of thousands of packages, whi
 Runs first, these are the executed calls from javascript.
  
 ### WebApi's:
-These run and are send away to the browser and to different threads, they complete separately and then when they are finished the go to the task queue.
+These run first in the call stack and are immediately send away to the browser, they complete separately and then when they are finished the go to the task queue.
  
-### Task Queue:
+### Task/Callback Queue:
 Holds the finished webapi processes then when the call stack is empty, it sends them to the call stack again.
+
+### Event Loop
+Handles the Task Queue and Call Stack, if the stack is empty it checks if there are tasks in the queue, and puts them in the stack to be completed and become part of the code.
 
 ### Video where the event loop is explained:
 
@@ -222,13 +241,7 @@ module.exports = {
     }
 };
 ```
-main.css<br />
-this makes the title red.
-```
-h1 {
-    color: red;
-}
-```
+
 
 >## Explain the purpose of “use strict” and Linters, exemplified with ESLint
 
@@ -715,8 +728,28 @@ In my opinion it looks really similar to how you inherit in java, aka. the exten
 
 
 >## Provide examples with es-next, running in a browser, using Babel and Webpack
+Video talking about es-next features:
+- https://www.youtube.com/watch?v=9yK4t2CuIHQ
 
+### Es-next Examples:
+Legacy JavaScript
+```
+var memoize = require('lodash').memoize;
 
+var upperCase = memoize(function(string) {
+  return string.toUpperCase();
+});
+```
+Converted Es-next JavaScript:
+
+Now we can just write import and we can shorten our function into an arrow function
+```
+import { memoize } from 'lodash';
+
+const upperCase = memoize(string => string.toUpperCase());
+```
+
+Shorter code that is more understandable.
 
 >## Provide a number of examples to demonstrate the benefits of using TypeScript, including, types, interfaces, classes and generics
 
@@ -745,6 +778,31 @@ interface IBook {
 ```
 
 >## Explain the ECMAScript Proposal Process for how new features are added to the language (the TC39 Process)
+
+TC39 Committee:
+
+The Ecma TC39 committee is responsible for evolving the ECMAScript programming language and authoring the specification. The committee operates by consensus and has discretion to alter the specification as it sees fit. However, the general process for making changes to the specification is as follows.
+
+### Development:
+
+Changes to the language are developed by way of a process which provides guidelines for evolving an addition from an idea to a fully specified feature, complete with acceptance tests and multiple implementations. There are five stages: a strawman stage, and 4 “maturity” stages. The TC39 committee must approve acceptance for each stage.
+
+### Stages:
+#### Stage 0 (Strawman):
+- No real spec
+- Public for feedback
+- Allows for input
+#### Stage 1 (Proposal):
+- Make the case for the addition
+- Describe the shape of a solution
+- Identify potential challenges
+#### Stage 2 (Draft):
+- Precisely describe the syntax
+- Describe semantics using formal spec language
+#### Stage 3 (Candidate):
+- Indicate that further refinement will require feedback from implementations and users
+#### Stage 4 (Finished):
+- Indicate that the addition is ready for inclusion in the formal ECMAScript standard
 
 # Callbacks, Promises and async/await
 ## Explain about promises in ES-6 including, the problems they solve, a quick explanation of the Promise API and:
@@ -801,12 +859,41 @@ async1()
 
 - #### [Shows the use of catch](https://github.com/grem848/FullStack_JavaScript_Flow1/blob/master/week2-promises/promisedemoclass/promisePar.js)
 
-### Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
+>## Explain about JavaScripts async/await, how it relates to promises and reasons to use it compared to the plain promise API.
+
+Link to week with subject:
+- https://fullstackjs.netlify.com/period1/day3/
+
+
+### Async/Await Explained:
+
+Async/Await is a long anticipated JavaScript feature that makes working with asynchronous functions much more enjoyable and easier to understand. It is build on top of Promises and is compatible with all existing Promise-based APIs.
+
+The name comes from `async` and `await` - the two keywords that will help us clean up our asynchronous code:
+
+#### Async - declares an asynchronous function (async function someName(){...}).
+- Automatically transforms a regular function into a Promise.
+- When called async functions resolve with whatever is returned in their body.
+- Async functions enable the use of await.
+
+#### Await - pauses the execution of async functions. (var result = await someAsyncCall();).
+- When placed in front of a Promise call, await forces the rest of the code to wait until that Promise finishes and returns a result.
+- Await works only with Promises, it does not work with callbacks.
+- Await can only be used inside async functions.
+
+#### When to use Promises or Async/Await
+
+https://hackernoon.com/should-i-use-promises-or-async-await-126ab5c98789
+
+
 
 ### Provide examples to demonstrate 
 - Why this often is the preferred way of handling promises
 - Error handling with async/await
 - Serial or parallel execution with async/await.
+
+https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9
+
 
 
 
