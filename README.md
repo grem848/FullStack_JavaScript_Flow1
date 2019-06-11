@@ -175,8 +175,7 @@ https://www.youtube.com/watch?v=8aGhZQkoFbQ
 >## Explain (some) of the purposes with the tools Babel and WebPack, using  examples from the exercises
 
 - Babel is essentially an ECMAScript 6 to ECMAScript 5 compiler. It allows you to use ES6 features in your projects and then compiles ES5 for you to use in production.
-- Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
-good Webpack notes<br />
+- Webpack is a bundler for modules. The main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.<br />
 - Bundles ES Modules, CommonJS and AMD modules (even combined).
 - Can create a single bundle or multiple chunks that are asynchronously loaded at runtime (to reduce initial loading time).
 - Dependencies are resolved during compilation, reducing the runtime size.
