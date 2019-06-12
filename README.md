@@ -732,6 +732,9 @@ In my opinion it looks really similar to how you inherit in java, aka. the exten
 
 
 >## Provide examples with es-next, running in a browser, using Babel and Webpack
+
+https://github.com/grem848/FullStack_JavaScript_Flow1/tree/master/week3-webpack/webpack-demo
+
 Video talking about es-next features:
 - https://www.youtube.com/watch?v=9yK4t2CuIHQ
 
