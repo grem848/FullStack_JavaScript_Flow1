@@ -448,6 +448,13 @@ Creates a new array with the values modified by the callback function
 >## Explain the methods *map, filter and reduce*
 
 * **Array.map**
+The map() method creates a new array with the results of calling a function for every array element.
+
+The map() method calls the provided function once for each element in an array, in order.
+
+Note: map() does not execute the function for array elements without values.
+
+Note: this method does not change the original array.
 
     ```js
     let numbers = [2, 3, 4, 5]
@@ -463,6 +470,11 @@ Creates a new array with the values modified by the callback function
     ```
 
 * **Array.filter**
+The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+
+Note: filter() does not execute the function for array elements without values.
+
+Note: filter() does not change the original array.
 
     ```js
     const names = ['Lars', 'Jan', 'Peter', 'Bo', 'Frederik']
@@ -477,7 +489,15 @@ Creates a new array with the values modified by the callback function
     ```
 
 * **Array.reduce**
+The reduce() method reduces the array to a single value.
 
+The reduce() method executes a provided function for each value of the array (from left-to-right).
+
+The return value of the function is stored in an accumulator (result/total).
+
+Note: reduce() does not execute the function for array elements without values.
+
+Note: this method does not change the original array.
     ```js
     let numbers = [2, 3, 4, 5]
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
