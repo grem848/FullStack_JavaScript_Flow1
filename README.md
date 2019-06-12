@@ -8,7 +8,7 @@
 
 In Java we have static type checking, so the programmer must specify the type (integer, double, string, etc.)
 
-In JavaScript we have dynamic tpye checking, so the programmer doesn't have to specify the type of a created variable
+In JavaScript we have dynamic type checking, so the programmer doesn't have to specify the type of a created variable
 
 
 ```javascript
@@ -268,6 +268,11 @@ You can use it in a specific function scope:
 })();
 // Non-strict code... 
 ```
+
+#### Linter and ESLint
+
+A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.
+
 
 
 # Explain using sufficient code examples the following features in JavaScript. 
